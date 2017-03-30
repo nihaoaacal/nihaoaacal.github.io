@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="lib/swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="lib/animate.min.css">
+    <link rel="stylesheet" href="./css/zpcss.css">
+</head>
+<body>
+<img src="img/music_note_big.png" alt="" id="aa" class="play">
+      <div class="swiper-container">
+           <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/t1-bg.png" alt="">
+               <div class="img1 animated bounceInDown"><img src="img/t1-yuan.png" alt="" ></div>
+                <div class="img2 animated slideInDown"><img src="img/t1-text.png" alt=""></div>
+               </div>
+               <div class="swiper-slide" >
+                  <img src="img/t2-bg.png" alt="">
+                 <div class="img3 animated bounceInDown"><img src="img/t2-2.png" alt="" ></div>
+                 <div class="img4 animated slideInLeft"><img src="img/t2-3.png" alt="" id="img4"></div>
+              </div>
+               <div class="swiper-slide">
+                   <img src="img/t3-bg.png" alt="" class="img">
+                  <div class="img5 animated bounceInDown"><img src="img/t3-1.png" alt="" ></div>
+                  <div class="img6 animated slideInRight"><img src="img/t3-2.png" alt="" ></div>
+               </div>
+               <div class="swiper-slide" id="slide1">
+                   <div class="img7 animated slideInLeft"><img src="img/t4-1.png" alt="" ></div>
+                  <div class="img8 animated slideInRight"><img src="img/t4-2.png" alt=""></div>
+                   <div class="img9 animated slideInUp"><img src="img/t4-3.png" alt="" ></div>
+               </div>
+               <div class="swiper-slide" id="slide2">
+                   <div class="img10 animated slideInUp"><img src="img/t5-1.png" alt="" ></div>
+                   <div class="img11 animated slideInLeft"><img src="img/t5-2.png" alt=""></div>
+                   <div class="img12 animated slideInLeft"><img src="img/t5-3.png" alt="" ></div>
+               </div>
+               <div class="swiper-slide" id="slide3">
+                   <div class="img13 animated bounceInDown"><img src="img/t6-1.png" alt="" ></div>
+                  <div class="img14 animated slideInRight"><img src="img/t6-2.png" alt="" ></div>
+                   <div class="img15 animated slideInLeft"><img src="img/t6-3.png" alt="" ></div>
+               </div>
+               <div class="swiper-slide" id="slide4">
+                   <div class="img16 animated bounceInDown"><img src="img/t7-1.png" alt="" ></div>
+                   <div class="img17 animated slideInDown"><img src="img/t7-2.png" alt="" ></div>
+                   <div class="img18 animated slideInLeft"><img src="img/t7-3.png" alt=""></div>
+               </div>
+               <div class="swiper-slide" id="slide5">
+                  <div class="img19 animated bounceInDown"><img src="img/t8-1.png" alt=""></div>
+                   <div class="img20 animated slideInRight"><img src="img/t8-2.png" alt=""></div>
+                  <div class="img21 animated slideInUp"><img src="img/t8-3.png" alt=""></div>
+               </div>
+               <div class="swiper-slide" id="slide6">
+                   <div class="img22 animated bounceInDown"><img src="img/t9-1.png" alt=""></div>
+                   <div class="img23 animated slideInUp"><img src="img/t9-2.png" alt=""></div>
+               </div>
+               <div class="swiper-slide" id="slide7">
+        <img src="img/t10-bg.png" alt="">
+                  <div class="zi">
+                      <h4>中通快递有限公司招聘</h4><p>电话：021-69784587(彭先生)</p><br><span>邮箱：123@qq.com</span>
+                  </div>
+                   <div class="img24 animated bounceInDown"><img src="img/t10-1.png" alt=""></div>
+                   <div class="img25 animated slideInUp"><img src="img/t10-5.png" alt=""></div>
+                   <div class="img26 animated slideInUp"><img src="img/t10-3.png" alt=""></div>
+                   <div class="img27 animated slideInUp"><img src="img/t10-4.png" alt=""></div>
+               </div>
+
+           </div>
+</div>
+
+<script src="lib/swiper-3.4.1.jquery.min.js"></script>
+<script src="lib/swiper-3.4.1.min.js"></script>
+<script src="lib/swiper.animate1.0.2.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+
+    });
+</script>
+<script>
+    var img=document.querySelector('#aa');
+    var audio=document.createElement('audio');
+    audio.src='2.mp3';
+    audio.autoplay=true;
+    document.body.appendChild(audio);
+    img.onclick=function(){
+        if(audio.paused){
+            audio.play();
+         img.style.animationPlayState='running';
+        }else{
+            audio.pause();
+           img.style.animationPlayState='paused';
+        }
+    }
+
+</script>
+</body>
+</html>
